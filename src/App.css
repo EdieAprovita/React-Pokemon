@@ -1,0 +1,33 @@
+/* App.css */
+body {
+  background-color: #6e6a6a; /* Este es un color gris claro. */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; /* Permitir el desbordamiento con scroll */
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Esto creará una cuadrícula de 3 columnas */
+  gap: 1rem; /* Espacio entre los elementos de la cuadrícula */
+}
+
+.title {
+  text-align: center;
+  grid-column: 1 / 4; /* El título se extenderá por las tres columnas */
+}
+
+.user-card {
+  text-align: center;
+}
