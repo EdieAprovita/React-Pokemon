@@ -1,208 +1,4 @@
 export interface IPokemon {
-	name: string;
-	url: string;
-}
-
-export interface IAbilities {
-	id: number;
-	name: string;
-	is_main_series: boolean;
-	generation: {
-		name: string;
-		url: string;
-	};
-	names: {
-		name: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-	effect_entries: {
-		effect: string;
-		short_effect: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-	effect_changes: {
-		version_group: {
-			name: string;
-			url: string;
-		};
-		effect_entries: {
-			effect: string;
-			language: {
-				name: string;
-				url: string;
-			};
-		}[];
-	}[];
-	flavor_text_entries: {
-		flavor_text: string;
-		language: {
-			name: string;
-			url: string;
-		};
-		version_group: {
-			name: string;
-			url: string;
-		};
-	}[];
-	pokemon: {
-		is_hidden: boolean;
-		slot: number;
-		pokemon: {
-			name: string;
-			url: string;
-		};
-	}[];
-}
-
-export interface ICharacteristics {
-	id: number;
-	gene_modulo: number;
-	possible_values: number[];
-	highest_stat: {
-		name: string;
-		url: string;
-	};
-	descriptions: {
-		description: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-}
-
-export interface IEggGroups {
-	id: number;
-	name: string;
-	names: {
-		name: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-	pokemon_species: {
-		name: string;
-		url: string;
-	}[];
-}
-
-export interface IGenders {
-	id: number;
-	name: string;
-	pokemon_species_details: {
-		rate: number;
-		pokemon_species: {
-			name: string;
-			url: string;
-		};
-	}[];
-	required_for_evolution: {
-		name: string;
-		url: string;
-	}[];
-}
-
-export interface IGrowthRates {
-	id: number;
-	name: string;
-	formula: string;
-	descriptions: {
-		description: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-	levels: {
-		level: number;
-		experience: number;
-		url: string;
-	}[];
-	pokemon_species: {
-		name: string;
-		url: string;
-	}[];
-}
-
-export interface INatures {
-	id: number;
-	name: string;
-	decreased_stat: {
-		name: string;
-		url: string;
-	};
-	increased_stat: {
-		name: string;
-		url: string;
-	};
-	likes_flavor: {
-		name: string;
-		url: string;
-	};
-	hates_flavor: {
-		name: string;
-		url: string;
-	};
-	pokeathlon_stat_changes: {
-		max_change: number;
-		pokeathlon_stat: {
-			name: string;
-			url: string;
-		};
-	}[];
-	move_battle_style_preferences: {
-		low_hp_preference: number;
-		high_hp_preference: number;
-		move_battle_style: {
-			name: string;
-			url: string;
-		};
-	}[];
-	names: {
-		name: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-}
-
-export interface IPokeathlonStats {
-	id: number;
-	name: string;
-	affecting_natures: {
-		increase: {
-			max_change: number;
-			nature: {
-				name: string;
-				url: string;
-			};
-		}[];
-		decrease: {
-			max_change: number;
-			nature: {
-				name: string;
-				url: string;
-			};
-		}[];
-	};
-	names: {
-		name: string;
-		language: {
-			name: string;
-			url: string;
-		};
-	}[];
-}
-
-export interface IPokemon {
 	id: number;
 	name: string;
 	base_experience: number;
@@ -806,5 +602,209 @@ export interface IPokemonTypes {
 	moves: {
 		name: string;
 		url: string;
+	}[];
+}
+
+export interface IPokemon {
+	name: string;
+	url: string;
+}
+
+export interface IAbilities {
+	id: number;
+	name: string;
+	is_main_series: boolean;
+	generation: {
+		name: string;
+		url: string;
+	};
+	names: {
+		name: string;
+		language: {
+			name: string;
+			url: string;
+		};
+	}[];
+	effect_entries: {
+		effect: string;
+		short_effect: string;
+		language: {
+			name: string;
+			url: string;
+		};
+	}[];
+	effect_changes: {
+		version_group: {
+			name: string;
+			url: string;
+		};
+		effect_entries: {
+			effect: string;
+			language: {
+				name: string;
+				url: string;
+			};
+		}[];
+	}[];
+	flavor_text_entries: {
+		flavor_text: string;
+		language: {
+			name: string;
+			url: string;
+		};
+		version_group: {
+			name: string;
+			url: string;
+		};
+	}[];
+	pokemon: {
+		is_hidden: boolean;
+		slot: number;
+		pokemon: {
+			name: string;
+			url: string;
+		};
+	}[];
+}
+
+export interface ICharacteristics {
+	id: number;
+	gene_modulo: number;
+	possible_values: number[];
+	highest_stat: {
+		name: string;
+		url: string;
+	};
+	descriptions: {
+		description: string;
+		language: {
+			name: string;
+			url: string;
+		};
+	}[];
+}
+
+export interface IEggGroups {
+	id: number;
+	name: string;
+	names: {
+		name: string;
+		language: {
+			name: string;
+			url: string;
+		};
+	}[];
+	pokemon_species: {
+		name: string;
+		url: string;
+	}[];
+}
+
+export interface IGenders {
+	id: number;
+	name: string;
+	pokemon_species_details: {
+		rate: number;
+		pokemon_species: {
+			name: string;
+			url: string;
+		};
+	}[];
+	required_for_evolution: {
+		name: string;
+		url: string;
+	}[];
+}
+
+export interface IGrowthRates {
+	id: number;
+	name: string;
+	formula: string;
+	descriptions: {
+		description: string;
+		language: {
+			name: string;
+			url: string;
+		};
+	}[];
+	levels: {
+		level: number;
+		experience: number;
+		url: string;
+	}[];
+	pokemon_species: {
+		name: string;
+		url: string;
+	}[];
+}
+
+export interface INatures {
+	id: number;
+	name: string;
+	decreased_stat: {
+		name: string;
+		url: string;
+	};
+	increased_stat: {
+		name: string;
+		url: string;
+	};
+	likes_flavor: {
+		name: string;
+		url: string;
+	};
+	hates_flavor: {
+		name: string;
+		url: string;
+	};
+	pokeathlon_stat_changes: {
+		max_change: number;
+		pokeathlon_stat: {
+			name: string;
+			url: string;
+		};
+	}[];
+	move_battle_style_preferences: {
+		low_hp_preference: number;
+		high_hp_preference: number;
+		move_battle_style: {
+			name: string;
+			url: string;
+		};
+	}[];
+	names: {
+		name: string;
+		language: {
+			name: string;
+			url: string;
+		};
+	}[];
+}
+
+export interface IPokeathlonStats {
+	id: number;
+	name: string;
+	affecting_natures: {
+		increase: {
+			max_change: number;
+			nature: {
+				name: string;
+				url: string;
+			};
+		}[];
+		decrease: {
+			max_change: number;
+			nature: {
+				name: string;
+				url: string;
+			};
+		}[];
+	};
+	names: {
+		name: string;
+		language: {
+			name: string;
+			url: string;
+		};
 	}[];
 }
